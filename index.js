@@ -40,6 +40,11 @@ app.post("/", (req, res) => {
 
 app.put("/", (req, res) => {
   for (let i = 0; i < users[0].length; i++) {
+    users[0].kidneys[i].healthy = true;
+  }
+  res.json({
+    message: "all kidneys are healthy",
+  });
 });
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
